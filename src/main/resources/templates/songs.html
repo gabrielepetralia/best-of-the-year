@@ -10,17 +10,12 @@
 </head>
 
 <body class="bg-dark text-white">
-	<h2 class="text-center my-5">Best of the year by <span class="text-info">[[${name}]]</span></h2>
+	<h2 class="text-center my-5">Best <span class="text-info">Songs</span> of the year</h2>
 	
-	<div class="dropdown d-flex justify-content-center my-5">
-	  <a class="btn btn-info dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-	    Get Best
-	  </a>
+	<div class="text-center">[[${songs}]]</div>
 	
-	  <ul class="dropdown-menu">
-	    <li><a class="dropdown-item" th:href="@{/movies}">Movies</a></li>
-	    <li><a class="dropdown-item" th:href="@{/songs}">Songs</a></li>
-	  </ul>
+	<div class="d-flex justify-content-center my-5">
+		<a th:href="@{/}" class="btn btn-info text-white">Go to Home</a>
 	</div>
 </body>
 </html>
