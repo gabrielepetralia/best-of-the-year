@@ -10,12 +10,19 @@
 </head>
 
 <body class="bg-dark text-white">
-	<h2 class="text-center my-5">Best <span class="text-info">Movies</span> of the year</h2>
+
+	<h2 class="text-center my-5">Best <span class="text-danger">Movies</span> of the year</h2>
 	
-	<div class="text-center">[[${movies}]]</div>
+	<p class="text-center">[[${movies}]]</p>
 	
 	<div class="d-flex justify-content-center my-5">
-		<a th:href="@{/}" class="btn btn-info text-white">Get Best Songs</a>
+		<span class="py-2">Movie at ID : </span>
+		<ul th:utext="${indexButtons}" class="d-flex justify-content-center my-0 list-unstyled"></ul>
 	</div>
+	
+	<div class="d-flex justify-content-center my-5">
+		<a th:href="@{/}" class="btn btn-danger text-white">Go to home</a>
+	</div>
+	
 </body>
 </html>

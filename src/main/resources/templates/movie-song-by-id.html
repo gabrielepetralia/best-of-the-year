@@ -13,15 +13,10 @@
 
 	<h2 class="text-center my-5">Best of the year by <span class="text-danger">[[${name}]]</span></h2>
 	
-	<div class="dropdown d-flex justify-content-center my-5">
-	  <a class="btn btn-danger dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-	    Show Best
-	  </a>
+	<p class="text-center">The [[${type2}]] at index <span class="text-danger">[[${id} + 1]]</span> is <span class="text-danger">[[${title}]]</span></p>
 	
-	  <ul class="dropdown-menu">
-	    <li><a class="dropdown-item" th:href="@{/movies}">Movies</a></li>
-	    <li><a class="dropdown-item" th:href="@{/songs}">Songs</a></li>
-	  </ul>
+	<div class="d-flex justify-content-center my-5">
+		<a th:href="@{/{type}(type=${type})}" class="btn btn-danger text-white">Go to [[${type}]]</a>
 	</div>
 	
 </body>
