@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-	<th:block th:replace="frags :: head" />
+	<th:block th:replace="~{frags :: head}" />
 </head>
 
 <body class="bg-dark text-white">
 
-	<h2 class="text-center my-5">Best of the year by <span class="text-danger">[[${name}]]</span></h2>
+	<div class="d-flex align-items-center justify-content-center my-5">
+		<img alt="logo" th:src="@{/imgs/podio.png}" width="50px">
+		<h2 class="mb-0 ms-2">Best of the year by <span class="text-danger">[[${name}]]</span></h2>
+	</div>
 	
-	<p class="text-center">The [[${type2}]] at index <span class="text-danger">[[${id} + 1]]</span> is <span class="text-danger">[[${title}]]</span></p>
+	<p class="text-center">The [[${type2}]] at number <span class="text-danger">[[${id} + 1]]</span> is <span class="text-danger">[[${title}]]</span></p>
 	
 	<div class="d-flex justify-content-center my-5">
 		<a th:href="@{/{type}(type=${type})}" class="btn btn-danger text-white">Go to [[${type}]]</a>

@@ -1,1 +1,42 @@
 @charset "ISO-8859-1";
+
+.list-title {
+	display: inline-block;
+	min-width: 300px;
+	text-align: center;
+	color: white;
+	background-color: #BB2D3B;
+	padding: 10px 20px;
+	text-decoration: none;
+	border: 1px solid #212529;
+	transition: all 0.3s;
+	cursor: pointer;
+}
+
+li:first-child .list-title {
+	border-radius: 0 15px 0 0 !important
+}
+
+li:last-child .list-title {
+	border-radius: 0 0 15px 0 !important
+}
+
+.list-title:hover {
+	background-color: #b02a37;
+}
+
+.list-id {
+	color: #BB2D3B;
+	font-weight: bold;
+	background-color: white;
+	padding: 10px 20px;
+	border: 1px solid #212529;
+}
+
+li:first-child .list-id {
+	border-radius: 15px 0 0 0 !important
+}
+
+li:last-child .list-id {
+	border-radius: 0 0 0 15px !important
+}

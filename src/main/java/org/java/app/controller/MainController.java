@@ -49,40 +49,41 @@ public class MainController {
 	
 	@GetMapping("/movies")
 	public String movies(Model model) {
-		final String movies = getBestMovies().stream()
-	            .map(Movie::getTitle)
-	            .reduce((s1, s2) -> s1 + ", " + s2)
-	            .orElse("");
-		
-		String indexButtons = "";
-		
-		for(int i=0; i<getBestMovies().size(); i++) {
-			final String button = "<li class='mx-2'><a class='btn btn-danger text-white' href='/movies/" + i + "'>" + (i + 1) + "</a></li>";
-			indexButtons += button;
-		}
-		
-		model.addAttribute("movies", movies);
-		model.addAttribute("indexButtons", indexButtons);
+//		final String movies = getBestMovies().stream()
+//	            .map(Movie::getTitle)
+//	            .reduce((s1, s2) -> s1 + ", " + s2)
+//	            .orElse("");
+//		
+//		String indexButtons = "";
+//		
+//		for(int i=0; i<getBestMovies().size(); i++) {
+//			final String button = "<li class='mx-2'><a class='btn btn-danger text-white' href='media/movies/" + i + "'>" + (i + 1) + "</a></li>";
+//			indexButtons += button;
+//		}
+//	
+//		model.addAttribute("indexButtons", indexButtons);
+
+		model.addAttribute("movies", getBestMovies());
 		
 		return "movies";
 	}
 	
 	@GetMapping("/songs")
 	public String songs(Model model) {
-		final String songs = getBestSongs().stream()
-	            .map(Song::getTitle)
-	            .reduce((s1, s2) -> s1 + ", " + s2)
-	            .orElse("");
-		
-		String indexButtons = "";
-		
-		for(int i=0; i<getBestSongs().size(); i++) {
-			final String button = "<li class='mx-2'><a class='btn btn-danger text-white' href='/songs/" + i + "'>" + (i + 1) + "</a></li>";
-			indexButtons += button;
-		}
-		
-		model.addAttribute("songs", songs);
-		model.addAttribute("indexButtons", indexButtons);
+//		final String songs = getBestSongs().stream()
+//	            .map(Song::getTitle)
+//	            .reduce((s1, s2) -> s1 + ", " + s2)
+//	            .orElse("");
+//		
+//		String indexButtons = "";
+//		
+//		for(int i=0; i<getBestSongs().size(); i++) {
+//			final String button = "<li class='mx-2'><a class='btn btn-danger text-white' href='media/songs/" + i + "'>" + (i + 1) + "</a></li>";
+//			indexButtons += button;
+//		}
+//		
+//		model.addAttribute("indexButtons", indexButtons);
+		model.addAttribute("songs", getBestSongs());
 		
 		return "songs";
 	}

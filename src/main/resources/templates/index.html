@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-	<th:block th:replace="frags :: head" />
+	<th:block th:replace="~{frags :: head}" />
 </head>
 
 <body class="bg-dark text-white">
@@ -11,15 +11,11 @@
 		<h2 class="mb-0 ms-2">Best of the year by <span class="text-danger">[[${name}]]</span></h2>
 	</div>
 	
-	<div class="dropdown d-flex justify-content-center my-5">
-	  <a class="btn btn-danger dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-	    Show Best
-	  </a>
 	
-	  <ul class="dropdown-menu">
-	    <li><a class="dropdown-item" th:href="@{/movies}">Movies</a></li>
-	    <li><a class="dropdown-item" th:href="@{/songs}">Songs</a></li>
-	  </ul>
+	
+	<div class="d-flex justify-content-center my-5">
+		<a th:href="@{/movies}" class="btn btn-danger text-white me-3">Best Movies</a>
+		<a th:href="@{/songs}" class="btn btn-danger text-white">Best Songs</a>
 	</div>
 	
 </body>
