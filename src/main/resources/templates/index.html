@@ -1,10 +1,15 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head th:replace="head :: head"></head>
+<head>
+	<th:block th:replace="frags :: head" />
+</head>
 
 <body class="bg-dark text-white">
 
-	<h2 class="text-center my-5">Best of the year by <span class="text-danger">[[${name}]]</span></h2>
+	<div class="d-flex align-items-center justify-content-center my-5">
+		<img alt="logo" th:src="@{/imgs/podio.png}" width="50px">
+		<h2 class="mb-0 ms-2">Best of the year by <span class="text-danger">[[${name}]]</span></h2>
+	</div>
 	
 	<div class="dropdown d-flex justify-content-center my-5">
 	  <a class="btn btn-danger dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">

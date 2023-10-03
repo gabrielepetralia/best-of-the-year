@@ -87,7 +87,7 @@ public class MainController {
 		return "songs";
 	}
 	
-	@GetMapping("/{type}/{id}")
+	@GetMapping("/media/{type}/{id}")
 	public String getMovieSongById(@PathVariable String type, @PathVariable int id, Model model) {
 		final String name = "Gabriele Petralia";
 		model.addAttribute("name", name);
